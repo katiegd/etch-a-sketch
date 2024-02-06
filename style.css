@@ -1,0 +1,68 @@
+body {
+    background-color: aliceblue;
+}
+
+button {
+    font-family: 'Courier New', Courier, monospace;
+    width: auto;
+    border: none;
+    padding: 5px 10px;
+    background-color: rgb(171, 154, 255);
+}
+
+#container {
+    background-color: rgb(237, 231, 255);
+    font-family:'Courier New', Courier, monospace;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 75%;
+    margin: 0px auto;
+}
+
+#header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 500px;
+}
+
+#selection {
+    text-align: center;
+}
+
+#board {
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid rgb(162, 162, 162);
+    margin: 50px auto 100px auto;
+}
+
+#blkBtn:hover {
+    background-color: black;
+    cursor: pointer;
+    color: white;
+}
+
+#blueBtn:hover {
+    background-color: rgb(13, 25, 255);
+    cursor: pointer;
+    color: white;
+}
+
+#clearBtn:hover, #inputEnterBtn:hover {
+    background-color: rgb(255, 255, 255);
+    cursor: pointer;
+    color: rgb(171, 154, 255);
+}
+
+#hint {
+    font-size: .8em;
+    font-weight: bold;
+    margin-bottom: 20px;
+
+}
+
+.cell {
+    border: 1px solid rgb(162, 160, 160);
+}

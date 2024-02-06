@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etch-A-Sketch!</title>
+<script src="./main.js" defer></script>
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <h1>Etch-A-Sketch</h1>
+        </div>
+        <div id="selection"><p>Choose your size: <input id ="boardSize" value="16">
+            <button id="inputEnterBtn" onclick="removeGridCells(),createBoard()">Enter</button></p>
+            <p id="hint"></p>
+        </div>
+        <div id="buttons">
+            <button id="blkBtn">Black</button>
+            <button id="blueBtn">Blue</button>
+            <button id="randomBtn">Random</button>
+            <button id="clearBtn">Clear Grid</button>
+        </div>
+
+        <div id="board">
+
+        </div>
+    </div>
+    
+</body>
+</html>
