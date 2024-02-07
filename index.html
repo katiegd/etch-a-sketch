@@ -13,14 +13,14 @@
             <h1>Etch-A-Sketch</h1>
         </div>
         <div id="selection"><p>Choose your size: <input id ="boardSize" value="16">
-            <button id="inputEnterBtn" onclick="removeGridCells(),createBoard()">Enter</button></p>
+            <button id="inputEnterBtn" onclick="removeCells(),createBoard(), removeInputHint()">Enter</button></p>
             <p id="hint"></p>
         </div>
         <div id="buttons">
             <button id="blkBtn">Black</button>
             <button id="blueBtn">Blue</button>
             <button id="randomBtn">Random</button>
-            <button id="clearBtn">Clear Grid</button>
+            <button id="clearBtn" onclick="removeCells(),createBoard()">Clear Grid</button>
         </div>
 
         <div id="board">

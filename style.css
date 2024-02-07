@@ -17,7 +17,8 @@ button {
     flex-direction: column;
     align-items: center;
     width: 75%;
-    margin: 0px auto;
+    margin: 100px auto;
+    border-radius: 100px;
 }
 
 #header {
@@ -25,6 +26,7 @@ button {
     flex-direction: column;
     align-items: center;
     width: 500px;
+    padding-top: 50px;
 }
 
 #selection {
@@ -34,6 +36,7 @@ button {
 #board {
     display: flex;
     flex-wrap: wrap;
+    background-color: white;
     border: 1px solid rgb(162, 162, 162);
     margin: 50px auto 100px auto;
 }
@@ -64,5 +67,5 @@ button {
 }
 
 .cell {
-    border: 1px solid rgb(162, 160, 160);
+    border: 1px solid rgb(214, 214, 214);
 }
