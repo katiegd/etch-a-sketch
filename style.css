@@ -43,6 +43,13 @@ button {
     margin: 50px auto 100px auto;
 }
 
+#footer {
+    font-size: .75em;
+    font-weight: bold;
+    padding-bottom: 30px;
+
+}
+
 #blkBtn:hover {
     background-color: black;
     cursor: pointer;
