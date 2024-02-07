@@ -12,6 +12,7 @@ const randomBtn = document.querySelector('#randomBtn');
 const clearBtn = document.querySelector('#clearBtn');
 const inputHint = document.querySelector('#hint');
 const boardGrid = document.querySelector('#board');
+let color = "black";
 
 // Event listeners 
 inputSize.addEventListener('click', showInputHint); //clicking the input field
@@ -22,23 +23,24 @@ board.style.width = board.style.height = `${gridSize}px`;
 
 // Function to create the grid
 function createBoard() {
-    let boardSize = Number(inputSize.value);
+    let boardSize = inputSize.value;
     const numDivs = (boardSize * boardSize);
 
     for(let i = 0; i < numDivs; i++) {
-        if(boardSize < 2 || boardSize > 99) {
-            inputHint.textContent = "Error. Please input a number between 2 and 99.";
-        } else {
+        if(boardSize > 2 && boardSize < 99) { 
+            console.log(boardSize);
         const boardCell = document.createElement('div');
 
-        boardCell.style.width = boardCell.style.height = `${(gridSize/boardSize) - 2}px`;
+        boardCell.style.width = boardCell.style.height = `${(gridSize/boardSize)-2}px`;
 
         boardCell.classList.add('cell');
         board.appendChild(boardCell);
             
-        boardCell.addEventListener('mouseover', changeColorBlk);
+        boardCell.addEventListener('mouseover', colorSquare);
         }
-
+        else {
+            inputHint.textContent = "Error. Please input a number between 2 and 99.";
+        }
         // blueBtn.addEventListener('click', function (e) {
         //     const boardCell = document.querySelector('.cell');
         //     boardCell.addEventListener('mouseover', changeColorBlue);
@@ -63,13 +65,16 @@ function removeInputHint() {
 }
 
 // Function to change color when hovered over.
-function changeColorBlk() {
-    this.style.backgroundColor = "black";
-
+function colorSquare() {
+    if(color === 'random') {
+        this.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%`;
+    }
+    else {
+        this.style.backgroundColor = color;
 }
-
-function changeColorBlue() {
-    this.style.backgroundColor = "blue";
+}
+function changeColor(choice) {
+    color = choice;
 }
 
 // Runs function to create board.
